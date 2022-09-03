@@ -12,6 +12,6 @@ def init_app():
         from .home import home
 
         app.register_blueprint(home.home_bp)
-        app.register_blueprint(lab.lab_bp)
+        app.register_blueprint(lab.lab_bp, url_prefix="/lab")
 
         return app
