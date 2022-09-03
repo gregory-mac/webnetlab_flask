@@ -1,6 +1,14 @@
-from flask import Flask
+from flask import Flask, render_template
 
 import config
+
+
+def error_page_not_found(e):
+    return render_template("errors/404.html"), 404
+
+
+def error_internal_server_error(e):
+    return render_template("errors/500.html"), 500
 
 
 def init_app():
@@ -13,5 +21,8 @@ def init_app():
 
         app.register_blueprint(home.home_bp)
         app.register_blueprint(lab.lab_bp, url_prefix="/lab")
+
+        app.register_error_handler(404, error_page_not_found)
+        app.register_error_handler(500, error_internal_server_error)
 
         return app
