@@ -6,6 +6,8 @@ authors = ["Grigoriy Macheev <gmacheev@gmail.com>"]
 
 [tool.poetry.dependencies]
 python = "^3.9"
+Flask = "^2.2.2"
+python-dotenv = "^0.21.0"
 
 [tool.poetry.dev-dependencies]
 
