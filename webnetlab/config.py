@@ -13,5 +13,4 @@ class Config:
     # Server settings
     server_ip: str = os.getenv("WEBNETLAB_SERVER_IP")
     server_port: int = os.getenv("WEBNETLAB_SERVER_PORT")
-    worker_count: int = os.getenv("WEBNETLAB_SERVER_WORKERS")
-    reload_app_on_change: bool = os.getenv("WEBNETLAB_SERVER_RELOAD")
+    debug_mode: bool = os.getenv("WEBNETLAB_DEBUG_MODE")
