@@ -9,7 +9,9 @@ def init_app():
 
     with app.app_context():
         from .lab import lab
+        from .home import home
 
+        app.register_blueprint(home.home_bp)
         app.register_blueprint(lab.lab_bp)
 
         return app
